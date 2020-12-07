@@ -1,6 +1,6 @@
 # Data-Mining-and-Text-Mining-Project-[Polimi](https://www.polimi.it/)
 
-### This Repository contains the homework projects for the course [Data Mining and Text Mining](https://www11.ceda.polimi.it/schedaincarico/schedaincarico/controller/scheda_pubblica/SchedaPublic.do?&evn_default=evento&c_classe=691572&polij_device_category=DESKTOP&__pj0=0&__pj1=17f53de47fb15c45b12fba90714f19a6)
+### This Repository contains the project for the course [Data Mining and Text Mining](https://www11.ceda.polimi.it/schedaincarico/schedaincarico/controller/scheda_pubblica/SchedaPublic.do?&evn_default=evento&c_classe=691572&polij_device_category=DESKTOP&__pj0=0&__pj1=17f53de47fb15c45b12fba90714f19a6)
 ________________________
 - Academic year 2020-2021
 - 1st semester of 2st year
