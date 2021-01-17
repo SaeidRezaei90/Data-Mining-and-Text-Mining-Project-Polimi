@@ -28,7 +28,14 @@ Having two kinds of features which are Categorical Features which has been alrea
 Visualization of numerical data was also represented in histograms was taken to better understand of the distribution of data. Since some features may have the outlier and have different distributions different from normal distribution, Power Transformation Scaler was used to transform so-called distributions to Gaussian distribution. Having all the numerical attribute in small scale, we were able to detect outlier better and thereby to replace them with upper and lower bound.
 ###	 Feature Aggregation
 Since numerical features have statistical properties, we did analytical calculations and implementation on them.
-Due to the recent weather conditions (3 or 7 days) have high informativity with respect to the (14 days), we did average weighted on them(following figure).
+Due to the recent weather conditions (3 or 7 days) have high informativity with respect to the (14 days), we did average weighted on them(following figures).
  <p float="left">
-  <img src="equation.PNG" width="700" height="400" />
+  <img src="Images/equation.PNG" width="700" height="400" />
+</p>
+ <p float="left">
+  <img src="Images/correlation1.PNG" width="700" height="400" />
+</p>
+Drawing the correlation matrix with heat map tools, covariances each two variables were shown. Thereby by defining the threshold 0.85, we removed one of the correlated features
+ <p float="left">
+  <img src="Images/correlation2.PNG" width="700" height="400" />
 </p>
