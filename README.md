@@ -13,5 +13,9 @@ ________________________
 #### Collaborators
 * Saeid Rezaei
 * Abdolvakil Fazli
-* Tara 
+* Tara Tandel
 * Ghodrat Rezaei
+________________________
+## Introduction 
+
+This report is aimed at explaining the methodology that was chosen to analyze and do the classification based on Predictive Maintenance data set for prediction of faults on air conditioning equipment installed mobile network transition site in a 14-days forecast window. Available information is related to weather conditions (past and forecast), alarms and faults occurred on site, statistic features of the site. Generally, we have 621299 number of observations and 136 features for two years (2019-2020) time intervals which in each date there are set of observation falling and the class target(aircon_sum_wo_target_next_14d) is binary values of 0 and 1 which shows the presence of a fault in the following 14 days.
