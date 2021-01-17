@@ -44,18 +44,18 @@ For the Alarms duration features, we did the same.
     Then for the features cat_mean/max/min_persistance_prevXd, we did the above process.
     Normalizing skewness, kurtosis indicator of the sum-alarms distribution over time and number of alarms during 3,7,14 days between -1 and +1, we implemented statistical implementation. As an example for normalized skewness of a certain device measurement between (-0.2,-1) and normalized kurtosis of (-0.2,0.2) we have the below distribution over time.
  <p float="left">
-  <img src="Images/3.png" width="700" height="400" />
+  <img src="Images/3.PNG" width="700" height="400" />
 </p>
 Accordingly we did weighed average on the number of alarms pre 3,7 and 14 days with respect to the normalize skewness and kurtosis. When we have such behave of the distribution (shown above), previous 14 days sum-alarms have more weight with respect to the previous 3 or 7 days.
 Again for the normalized skewness between (0.2 , 1) and skewness (0.2,1) which means the distribution near mean value has extreme frequencies
  <p float="left">
-  <img src="Images/4.png" width="700" height="400" />
+  <img src="Images/4.PNG" width="700" height="400" />
 </p>
     As shown above, number of alarms for cat measurement has more weight during previous 3 or 7 days and less weight toward previous 14 days. Aggregating so-called features with weighted average mentioned in first part, we decreased the number of features to 5 which is shown in (following figures).
 Aggregated equipment sums alarms - Aggregated fire/smoke sum alarms-
 Aggregated ge sum alarms- Aggregated power sum alarms- Aggregated temperature sum alarms
  <p float="left">
-  <img src="Images/5.png" width="700" height="400" />
+  <img src="Images/5.PNG" width="700" height="400" />
 </p>
 
 
@@ -64,7 +64,7 @@ After doing the feature aggregation and concatenating the aggregated numerical f
 The algorithm learns that a given class is more common, making it “natural” for there to be a greater tendency towards it. The algorithm is then prone to overfitting the majority class. Just by predicting the majority class, models would score high on their loss-functions. In these instances, the Accuracy Paradox appears.
 Our Approach was to oversampling and down sampling of the classes, leading to better estimation of base line performance in order to be able to do the feature selection methods. We used 4 different methods of feature selections on the oversampled data frame 
  <p float="left">
-  <img src="Images/6.png" width="700" height="400" />
+  <img src="Images/6.PNG" width="700" height="400" />
 </p>
 As it is shown in the chart best feature selection method is PCA with performance of (f1-mean, variance =0.02).
 
