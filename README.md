@@ -33,9 +33,9 @@ Due to the recent weather conditions (3 or 7 days) have high informativity with 
   <img src="Images/equation.PNG" width="700" height="400" />
 </p>
  <p float="left">
-  <img src="Images/correlation1.PNG" width="700" height="400" />
+  <img src="Images/correlation1.png" width="700" height="400" />
 </p>
 Drawing the correlation matrix with heat map tools, covariances each two variables were shown. Thereby by defining the threshold 0.85, we removed one of the correlated features
  <p float="left">
-  <img src="Images/correlation2.PNG" width="700" height="400" />
+  <img src="Images/correlation2.png" width="700" height="400" />
 </p>
