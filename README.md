@@ -39,3 +39,39 @@ Drawing the correlation matrix with heat map tools, covariances each two variabl
  <p float="left">
   <img src="Images/correlation2.png" width="700" height="400" />
 </p>
+
+For the Alarms duration features, we did the same.
+    Then for the features cat_mean/max/min_persistance_prevXd, we did the above process.
+    Normalizing skewness, kurtosis indicator of the sum-alarms distribution over time and number of alarms during 3,7,14 days between -1 and +1, we implemented statistical implementation. As an example for normalized skewness of a certain device measurement between (-0.2,-1) and normalized kurtosis of (-0.2,0.2) we have the below distribution over time.
+ <p float="left">
+  <img src="Images/3.png" width="700" height="400" />
+</p>
+Accordingly we did weighed average on the number of alarms pre 3,7 and 14 days with respect to the normalize skewness and kurtosis. When we have such behave of the distribution (shown above), previous 14 days sum-alarms have more weight with respect to the previous 3 or 7 days.
+Again for the normalized skewness between (0.2 , 1) and skewness (0.2,1) which means the distribution near mean value has extreme frequencies
+ <p float="left">
+  <img src="Images/4.png" width="700" height="400" />
+</p>
+    As shown above, number of alarms for cat measurement has more weight during previous 3 or 7 days and less weight toward previous 14 days. Aggregating so-called features with weighted average mentioned in first part, we decreased the number of features to 5 which is shown in (following figures).
+Aggregated equipment sums alarms - Aggregated fire/smoke sum alarms-
+Aggregated ge sum alarms- Aggregated power sum alarms- Aggregated temperature sum alarms
+ <p float="left">
+  <img src="Images/5.png" width="700" height="400" />
+</p>
+
+
+## Feature Selection 
+After doing the feature aggregation and concatenating the aggregated numerical features and categorical features, we did feature selection in order to select more informative and important features. Target class has 617717 of 0 and 3583 of 1 value. So, the target values have been distributed in an unbalanced manner. The algorithm receives significantly more examples from one class, prompting it to be biased towards that particular class. It does not learn what makes the other class “different” and fails to understand the underlying patterns that allow us to distinguish classes.
+The algorithm learns that a given class is more common, making it “natural” for there to be a greater tendency towards it. The algorithm is then prone to overfitting the majority class. Just by predicting the majority class, models would score high on their loss-functions. In these instances, the Accuracy Paradox appears.
+Our Approach was to oversampling and down sampling of the classes, leading to better estimation of base line performance in order to be able to do the feature selection methods. We used 4 different methods of feature selections on the oversampled data frame 
+ <p float="left">
+  <img src="Images/6.png" width="700" height="400" />
+</p>
+As it is shown in the chart best feature selection method is PCA with performance of (f1-mean, variance =0.02).
+
+## Model Selection
+After trying some simple regression models such as Linear Regression and Lasso, we decided to focus on more complex tools. We used the Python library Sklearn to get all of our models. Since our target is unbalanced, we did the oversampling before feeding Our models.
+For all the models, we first split the data into Train and Test set and performed a 3 fold cross validation on the train set to obtain the best combination of parameters. We kept 30% of the data as a test set even if performing cross validation, to be sure that the model predicted was effective also on data never seen from the model. Since the training was done only on 70% of the entire set, the evaluation is likely to assume values slightly pessimistic compared to the real ones. Nonetheless, the final model, used for the prediction delivered, was built on the entire dataset, thus not influencing the real error of our algorithm. 
+For each model, we defined the Model Structure itself and Parameterization space by which the greedy search(gs) approach can iteratively examine through the defined space of parameters and pick up the best parameter which can give us the minimum amount of error. By defining the cross-validation (cv) equal to 3 in greedy search, probability of over-fitting will decrease significantly. Here are shown Different Models with f1-score for training and test set
+
+
+
