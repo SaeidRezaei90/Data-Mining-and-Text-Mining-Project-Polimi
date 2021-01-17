@@ -30,5 +30,5 @@ Visualization of numerical data was also represented in histograms was taken to 
 Since numerical features have statistical properties, we did analytical calculations and implementation on them.
 Due to the recent weather conditions (3 or 7 days) have high informativity with respect to the (14 days), we did average weighted on them(figure 1).
  <p float="left">
-  <img src="Images/equation." width="500" height="500" />
+  <img src="equation.PNG" width="500" height="500" />
 </p>
